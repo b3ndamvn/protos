@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package sarif_parser;
+
+option go_package = "vulncode.sarif_parser.v1;sarif_parserv1";
+
+service SarifParser {
+  rpc Parse (stream RequestChunk) returns (stream ResponseChunk) {}
+}
+
+message RequestChunk {
+  bytes file_content = 1;
+}
+
+message ResponseChunk {
+  bytes parse_result = 1;
+}
