@@ -1,4 +1,4 @@
-module protos
+module github.com/b3ndamvn/protos
 
 go 1.22
 
